@@ -4,3 +4,38 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-dark {
+    --thick-weight: 785;
+    --thin-weight: 465;
+    --main-color: #00CC14;
+    --background-color: #000000;
+    --background-image: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), 
+        repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), 
+        repeating-linear-gradient(to bottom, #007f0c, #004306);
+    --button-hover-background-color: var(--main-color);
+}
+
+:root.theme-light {
+    --thick-weight: 700;
+    --thin-weight: 400;
+    --main-color: #000000;
+    --background-color: #FFFFFF;
+    --background-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), 
+        repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px), 
+        repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+    --button-hover-background-color: var(--background-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --thick-weight: 785;
+    --thin-weight: 465;
+    --main-color: #00CC14;
+    --background-color: #000000;
+    --background-image: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), 
+        repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), 
+        repeating-linear-gradient(to bottom, #007f0c, #004306);
+    --button-hover-background-color: var(--main-color);
+    }
+}
